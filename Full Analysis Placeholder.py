@@ -6,7 +6,7 @@ def grouptask2(maxh=0.675,minh=0.03,dh=0.015,height=0.75,top=1.5,bottom=0.8,g=9.
     
     #Minor loss is a sum of losses from area contraction, sharp entrance, and ball valve, respectively
     #Default values are currently set to solve Problem 1
-    #For Porblem 3, change in dh is required when calling the function
+    #For Problem 3, change in dh is required when calling the function
     
     minh = minh - 0.001                     #correction for np.arange to include endpoint
     h = np.arange(maxh,minh,-dh)            #Define array to contain all values of height (h) given dh
