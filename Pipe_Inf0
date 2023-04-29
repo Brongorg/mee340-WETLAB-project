@@ -1,0 +1,46 @@
+def Pipe_info():
+    pipe_type = input("Enter pipe type: ")
+    diameter = float(input("Enter diameter of {} pipe (in meters): ".format(pipe_type)))
+    length = float(input("Enter length of {} pipe (in meters): ".format(pipe_type)))
+    epsilon = float(input("Enter epsilon of {} pipe (in millimeter): ".format(pipe_type)))
+    num_pipes = int(input("Enter number of {} pipes: ".format(pipe_type)))
+    cross_sectional_area = (3.14159 * (diameter ** 2)) / 4
+    pipe_info = {
+        "type": pipe_type,
+        "diameter": diameter,
+        "length": length,
+        "epsilon": epsilon,
+        "num_pipes": num_pipes,
+        "cross_sectional_area": cross_sectional_area  
+    }
+    return pipe_info
+
+
+
+
+
+
+pipe_list = []
+
+while True:
+    pipe_info = Pipe_info()
+    pipe_list.append(pipe_info)
+    cont = input("Do you want to enter another pipe? (Y/N): ")
+    if cont.lower() == "n":
+        break
+        
+total_length = 0  #used for finding Friction Factor
+for pipe in pipe_list:
+    length = pipe["length"]
+    num_pipes = pipe["num_pipes"]
+    total_length += length * num_pipes
+    
+    
+    #Calc Reynolds 
+    dens = 1000  # fluid density (kg/m^3)
+    mu = 0.001  # fluid dynamic viscosity (Pa*s)
+    v = 0.5     # average fluid velocity (m/s) - set as example
+    D = pipe["diameter"]
+    Re = rho * v * D / mu
+    
+  
