@@ -1,3 +1,15 @@
+import Pipe_Info
+
+#def returnMajorLoss(pipeCount):
+    #for(pipe in range(pipeCount)):
+
+
+
+
+
+    #return 1
+
+
 def ReturnMinorLoss(input):
     
     if(input == 'A'): #90 degrees elbow Bend
@@ -62,6 +74,5 @@ def ReturnMinorLoss(input):
     else:
         return -1
     
-        
-    
-    
+
+
