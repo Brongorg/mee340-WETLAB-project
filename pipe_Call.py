@@ -10,7 +10,7 @@ def pipeCall():
         "diameter": diameter,
         "length": length,
         "epsilon": epsilon,
-        "num_pipes": num_pipes,
+        #"num_pipes": num_pipes,
         "cross_sectional_area": cross_sectional_area  
     }
     return pipe_info

@@ -13,7 +13,8 @@ class pipe_Info:
         self.pipeType = pT
         self. diameter = d
         self.length = l
-        self.surfaceRoughness = (3.14159*(d**2))/4
+        self.surfaceRoughness = sR
+        self.crossSectionalArea= (3.14159*(d**2))/4
 
         #Class function to display information
     def displayClassInfo(self):
