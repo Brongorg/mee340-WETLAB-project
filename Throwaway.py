@@ -1,12 +1,4 @@
 def ReturnMinorLoss(entry):
-
-    print("90 Degrees Elbow Bend: A", '\n',
-          "90 Degrees Miter Bend: B", '\n'
-          "45 Degrees Elbow Bend: C", '\n',
-          "180 Degrees Retrun Bend: D",'\n',
-          "Tee Branch Flow: E",'\n',
-          "Tee Line Flow: F",'\n',
-          "Threaded Union: G" '\n')
     
     if(entry == 'A'): #90 degrees elbow Bend
         print("Flanged = 0", '\n', "Threaded = 1")
@@ -17,6 +9,7 @@ def ReturnMinorLoss(entry):
             return(0.9)
         else:
             return(-1)
+        
     elif(entry == "B"): #90 Degrees Miter Bend
         print("Vaneless = 0", '\n', "Vanned = 1")
         select = int(input())
@@ -68,6 +61,3 @@ def ReturnMinorLoss(entry):
     
     else:
         return -1
-    
-
-
