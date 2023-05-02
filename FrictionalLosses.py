@@ -1,13 +1,14 @@
 import Pipe_Info
 
-#def returnMajorLoss(pipeCount):
-    #for(pipe in range(pipeCount)):
+def returnMajorLoss(pipeCount):
+    
 
 
 
 
 
-    #return 1
+
+    return 1
 
 
 def ReturnMinorLoss(input):
