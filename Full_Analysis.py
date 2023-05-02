@@ -79,6 +79,7 @@ def grouptask2(maxh=0.675,minh=0.03,dh=0.015,
     
     #Obtain deltaT array to compute time to deplete each division
 
+    print(D)
     area = (math.pi/4)*(D[len(D)-1]**2)
     
     #Replace D2 by D_(final pipe number)
