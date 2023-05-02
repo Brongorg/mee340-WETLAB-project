@@ -1,18 +1,13 @@
-import Pipe_Info
-
-def returnMajorLoss(pipeCount):
+def ReturnMinorLoss():
     
-
-
-
-
-
-
-    return 1
-
-
-def ReturnMinorLoss(input):
-    
+    print("90 Degrees Elbow Bend: A", '\n'
+          "90 Degrees Miter Bend: B", '\n'
+          "45 Degrees Elbow Bend: C", '\n'
+          "180 Degrees Retrun Bend: D", '\n'
+          "Tee Branch Flow: E", '\n'
+          "Tee Line Flow: F", '\n'
+          "Threaded Union: G", '\n')
+    input = input()
     if(input == 'A'): #90 degrees elbow Bend
         print("Flanged = 0", '\n', "Threaded = 1")
         select = int(input())

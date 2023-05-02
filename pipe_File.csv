@@ -1,7 +1,7 @@
-,pipe0,pipe1
-type,long,short
-diameter,1.0,2.0
-length,1.0,2.0
-epsilon,1.0,2.0
-num_pipes,1,2
-cross_sectional_area,0.7853975,3.14159
+,pipe0
+cross_sectional_area,0.7853975
+diameter,1.0
+epsilon,1.0
+length,1.0
+num_pipes,1
+type,D
