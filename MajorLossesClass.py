@@ -1,52 +1,42 @@
 from scipy.optimize import root_scalar
 import math
 
-class MajorLosses:
-    def __init__(self, density, diameter, roughness, length, dyn_visc,maxh,minh):
-        self.density = density
-        self.diameter = diameter
-        self.roughness = roughness
-        self.length = length
-        self.dyn_visc = dyn_visc
-        self.maxh = maxh
-        self.minh = minh
-
-
             
             
 
-    def calculate_Time(self):
-           
-        
+def calculate_Time(maxh,minh, length, diameter):
+    l = length
+    d 
        
-        minh = minh - 0.0000001 
-        h = np.arange(maxh,minh,-dh) 
+    minh = minh - 0.0000001 
+    h = np.arange(maxh,minh,-dh) 
 
-        Vol = [] 
-        for i in [h]:
-            Vol.append(length*width*dh)
+    Vol = [] 
+    for i in [h]:
+        Vol.append(length*width*dh)
 
-        Vave = []
-        for x in [h]: 
-            Vguess = math.sqrt(2*g*x) 
-            flag = 1
+    Vave = []
+    for x in [h]: 
+        Vguess = math.sqrt(2*g*x) 
+        flag = 1
 
-            while (flag == 1):
-                hf = 0 
-                for i in range(len(ENTER DIMATER ARRAY)):
-                    Re = Vguess*D[i]/nu   # CALL dimater LOCATION
-                    F = (1/-1.8*math.log10(6.9/Re))**2
-                    hf += F*L[i]/D[i]*((Vguess**2)/(2*g))# CALL dimater AND LENGTH LOCATION
-                Vresult = math.sqrt((2*g*x)/(1+hf+minorLoss))#CALL MINOR LOSS FUNCTION
-                errorTest = (Vguess-Vresult)/(Vresult)
+        major_loss = 0
 
-                if (errorTest > -alpha and errorTest < alpha): #error estimation: if change in height is sufficiently low, use current V as Vave for the height
-                    Vave.append(Vresult)
-                    flag = 0
-                else:
-                    Vguess = Vresult #Reset/Update Vguess 
+        while (flag == 1):
 
-            return Vave
+            Re = Vguess*d/nu   # CALL dimater LOCATION
+            F = (1/-1.8*math.log10(6.9/Re))**2
+            major_loss += F*l/d*((Vguess**2)/(2*g))# CALL dimater AND LENGTH LOCATION
+            Vresult = math.sqrt((2*g*x)/(1+major_loss))#CALL MINOR LOSS FUNCTION
+            errorTest = (Vguess-Vresult)/(Vresult)
+
+            if (errorTest > -alpha and errorTest < alpha): #error estimation: if change in height is sufficiently low, use current V as Vave for the height
+                Vave.append(Vresult)
+                flag = 0
+            else:
+                Vguess = Vresult #Reset/Update Vguess 
+
+            
 
         area = #LENGTH * WIDTH 
         deltaT = []
